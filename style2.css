@@ -1,0 +1,45 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bab86c;
+}
+.container {
+  text-align: center;
+}
+.heart-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.heart {
+  position: relative;
+  width: 50px; /* smaller width */
+  height: 50px; /* smaller height */
+  background-color: red;
+  transform: rotate(-45deg);
+}
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 50px; /* smaller width */
+  height: 50px; /* smaller height */
+  background-color: red;
+  border-radius: 50%;
+}
+.heart::before {
+  top: -25px; /* smaller distance */
+  left: 0;
+}
+.heart::after {
+  top: 0;
+  left: 25px; /* smaller distance */
+}
+.message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+}
